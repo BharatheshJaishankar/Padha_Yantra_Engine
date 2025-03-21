@@ -1,0 +1,17 @@
+[package]
+name = "padha_yantra"
+version = "0.1.0"
+edition = "2024"
+authors  = ["Bharathesh Jaishankar <bharatheshjaishankar@gmail.com>"]
+description = "An embeddable Kannada dictionary"
+
+[dependencies]
+lazy_static = "1.5.0"
+
+[profile.release]
+opt-level = "s"
+strip = "debuginfo"
+lto  = true
+incremental = false
+debug-assertions = false
+panic = "unwind"
